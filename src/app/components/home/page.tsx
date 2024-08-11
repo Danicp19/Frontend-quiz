@@ -3,7 +3,7 @@ import HomeItem from "./HomeItem";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from '../../lib/store';
-// // import { setQuizzes } from "./homeSlice";
+import { setQuizzes } from "./homeSlice";
 
 
 function ClientHome() {
@@ -16,17 +16,15 @@ function ClientHome() {
       const data = await response.json();
       setData(data?.quizzes || []);
     };
-
     fetchData();
   }, []);
-
 
   const { darkMode } = useSelector((state: RootState) => state.home);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  // dispatch(setQuizzes(data));
-  // }, [dispatch, data]);
+  useEffect(() => {
+    dispatch(setQuizzes(data));
+  }, [dispatch, data]);
 
   return (
     <div className="desktop:grid-cols-1 desktop:gap-24 mobile:gap-16 grid grid-cols-2">
@@ -58,4 +56,3 @@ function ClientHome() {
 }
 
 export default ClientHome;
-

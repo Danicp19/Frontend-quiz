@@ -1,9 +1,19 @@
-export type Invoice = {
-    id: string;
-    customer_id: string;
-    amount: number;
-    date: string;
-    // In TypeScript, this is called a string union type.
-    // It means that the "status" property can only be one of the two strings: 'pending' or 'paid'.
-    status: 'pending' | 'paid';
-  };
+export type QuizType = 'HTML' | 'CSS' | 'JavaScript' | 'Accessibility'
+
+export interface HomeItemProps {
+  img: string;
+  text: string;
+}
+
+export interface Data {
+  title: string;
+  icon: string;
+  questions: []
+}
+
+export interface HomeState {
+  name: string;
+  icon: string;
+  quizzes: Data[]; // Use a more specific type for quizzes if available
+  darkMode: boolean;
+}

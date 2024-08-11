@@ -1,14 +1,7 @@
-
 import { createSlice } from "@reduxjs/toolkit";
+import { Data, HomeState } from "@lib/definitions"
 
-interface HomeState {
-    name: string;
-    icon: string;
-    quizzes: any[]; // Use a more specific type for quizzes if available
-    darkMode: boolean;
-  }
-
-const initialState:HomeState = {
+const initialState: HomeState = {
   name: "",
   icon: "",
   quizzes: [],

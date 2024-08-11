@@ -23,14 +23,14 @@
       }
     ],
     "paths": {
-      "@pages/*": [
-        "pages/*"
+      "@lib/*": [
+        "app/lib/*"
       ],
       "@components/*": [
         "app/components/*"
       ],
-      "@containers/*": [
-        "containers/*"
+      "@ui/*": [
+        "app/ui/*"
       ],
       "@icons/*": [
         "assets/icons/*"

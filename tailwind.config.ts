@@ -8,6 +8,36 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        purple: "#A729F5",
+        "dark-navy": "#313E51", 
+        navy: "#3B4D66",
+        "grey-navy": "#626C7F",
+        "light-bluish": "#626C7F",
+        "light-grey": "#F4F6FA",
+        green: "#26D782",
+        red: "#EE5454",
+      },
+      
+
+      boxShadow: {
+        sm: "0px 16px 40px 0px rgba(143, 160, 193, 0.14)",
+      },
+    
+      screens: {
+        laptop: {
+          max: "75em",
+        },
+        desktop: {
+          max: "64em",
+        },
+        tablet: {
+          max: "43.75em",
+        },
+        mobile: {
+          max: "37.5em",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

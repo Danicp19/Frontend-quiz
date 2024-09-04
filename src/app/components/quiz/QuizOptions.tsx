@@ -27,7 +27,7 @@ function QuizOptions({ option, optionIndex, userAnswer, setIsAnswered }: QuizOpt
 
     return (
         <button
-            className={`tablet:gap-8 mobile:rounded-[1.2rem] mobile:text-[1.8rem] mobile:px-5 mobile:py-4 group flex w-full items-center gap-12 rounded-[2.4rem] border-[3px] px-8 py-7 text-[2.8rem] font-medium leading-[100%] text-grey-navy shadow-sm transition-all duration-300 ${isAnswerCorrect
+            className={`tablet:gap-8 mobile:rounded-[1.2rem] mobile:text-[1.8rem] mobile:px-5 mobile:py-4 group flex w-full items-center gap-12 rounded-[2.4rem] border-[3px] px-8 py-4 text-[1.8rem] text-left font-medium leading-[100%] text-grey-navy shadow-sm transition-all duration-300 ${isAnswerCorrect
                 ? "cursor-not-allowed border-green"
                 : isAnswerWrong
                     ? "cursor-not-allowed border-red"

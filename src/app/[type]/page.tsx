@@ -6,17 +6,19 @@ import QuizPage from '@components/quiz/QuizPage';
 import { RootState } from '@lib/store';
 
 export default function Quiz() {
-    
+
     const { name: selectedQuiz, quizzes } = useSelector((state: RootState) => state.home);
     const { questions, index } = useSelector((state: RootState) => state.quiz);
     const selectedQuizData = quizzes.find((item) => item.title === selectedQuiz);
-
     const dispatch = useDispatch();
-    const currentQuestion = questions[index];
 
     useEffect(() => {
-        dispatch(setQuestions(selectedQuizData?.questions));
+        if (selectedQuizData?.questions) {
+            dispatch(setQuestions(selectedQuizData.questions));
+        }
     }, [selectedQuiz, dispatch, selectedQuizData]);
+
+    const currentQuestion = questions?.[index] ?? null;
 
     return (
         <div>

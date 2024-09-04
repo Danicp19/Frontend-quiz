@@ -2,7 +2,7 @@
 import HomeItem from "./HomeItem";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from '../../lib/store';
+import { RootState } from '@lib/store';
 import { setQuizzes } from "./homeSlice";
 
 
@@ -27,6 +27,7 @@ function ClientHome() {
   }, [dispatch, data]);
 
   return (
+
     <div className="desktop:grid-cols-1 desktop:gap-24 mobile:gap-16 grid grid-cols-2">
       <div>
         <h1
@@ -52,6 +53,7 @@ function ClientHome() {
         </ul>
       </div>
     </div>
+
   );
 }
 

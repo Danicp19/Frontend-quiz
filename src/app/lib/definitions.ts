@@ -2,7 +2,7 @@ export type QuizType = 'HTML' | 'CSS' | 'JavaScript' | 'Accessibility'
 
 export interface HomeItemProps {
   img: string;
-  text: string;
+  text: QuizType;
 }
 
 export interface Data {
